@@ -1,0 +1,8 @@
+<!--pages/wordslist/wordslist.wxml-->
+
+<block wx:for="{{wordslist}}" wx:for-item="items">
+  <view class="wordsitem">
+    <view class="wordEn">{{items.wordEn}}</view>
+<view class="wordCh">{{items.wordCh}}</view>
+  </view>
+</block>

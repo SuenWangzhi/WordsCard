@@ -1,0 +1,34 @@
+/* pages/mine/mine.wxss */
+.openData{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 400rpx;
+  align-items: center;
+  align-content:center ;
+  justify-content:center ;
+  background-color:#EC8CB3 ;
+}
+.userImg{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.userName{
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 100%;
+  font-size: 40rpx;
+  color: white;
+  text-align: center;
+}
+.other{
+  background-color: #fff;
+  width: 100%;
+  height: 100rpx;
+  margin-top: 40rpx;
+  line-height: 100rpx;
+  padding-left: 35rpx;
+  box-sizing: border-box;
+}

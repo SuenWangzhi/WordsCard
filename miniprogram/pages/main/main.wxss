@@ -1,0 +1,70 @@
+page {
+  background-color: #fff;
+} 
+swiper-item>view{
+  width:710rpx;
+  padding-top:40rpx ;
+}
+.img-container{
+  width: 600rpx;
+  height: 600rpx;
+  overflow: hidden;
+  box-shadow:2rpx 0rpx 10rpx #888;
+  border: solid #666 1rpx;
+  border-radius: 20rpx;
+  position: relative;
+}
+swiper-item .card{
+  width: 600rpx;
+  height: 600rpx;
+  display: block;
+  border-radius: 20rpx;
+  position: absolute;
+}
+.rember-play{
+  display: flex;
+  justify-content: space-between;
+  width: 600rpx;
+  height: 150rpx;
+  align-items: center;
+  margin-top: -25rpx;
+  overflow: hidden;
+}
+.play image{
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+  box-shadow:0rpx 3rpx 5rpx #555;
+}
+.remenber,.mean{
+  width: 200rpx;
+  height: 70rpx;
+  color: #fff;
+  line-height: 70rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; 
+  background-color: #6663EC;
+  box-shadow: 0 1rpx 5rpx #666;
+}
+.remenber{
+  border-radius: 0 35rpx 35rpx 0;
+}
+.mean{
+  border-radius: 35rpx 0 0 35rpx;
+}
+.remenber image,.mean image{
+  width:50rpx;
+  height:50rpx;
+  background: white;
+  border-radius: 50%;
+  margin: 10px;
+}
+.wordEn{
+  width: 600rpx;
+  text-align: center;
+  font-size: 100rpx;
+  font-weight: 600;
+  color: white;
+}

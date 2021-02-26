@@ -1,0 +1,18 @@
+<!--pages/test/test.wxml-->
+<view class="container" style="background-color:{{bgcolor}}">
+  <view class="option">
+<image src="/images/cabbage.jpg"></image>
+</view>
+<view class="option">
+<image src="/images/cabbage.jpg"></image>
+</view>
+<view class="option">
+<image src="/images/cabbage.jpg"></image>
+</view>
+<view class="option">
+<image src="/images/cabbage.jpg"></image>
+</view>
+</view>
+<view class="wordEn">
+				oppyion
+				</view>

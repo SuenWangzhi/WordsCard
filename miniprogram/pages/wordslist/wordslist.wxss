@@ -1,0 +1,21 @@
+/* pages/wordslist/wordslist.wxss */
+page{
+  background-color: #fff;
+}
+.wordsitem{
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  font-size: 40rpx;
+  display: flex;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #eeeeee;
+}
+.wordEn{
+  width: 375rpx;
+  text-align: center;
+}
+.wordCh{
+  width: 375rpx;
+  text-align: center;
+}

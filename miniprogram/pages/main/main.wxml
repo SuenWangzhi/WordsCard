@@ -1,0 +1,33 @@
+	<page  style="background-color:{{bgcolor}}">
+	<swiper bindchange="currentchange" style="height: 100vh;" previous-margin="75rpx">
+	<block wx:for="{{background}}" wx:key="*this" wx:for-item="items">
+       
+    <swiper-item>
+      <view>
+				<view class="img-container">
+					<image class="card" bindtap="bb"  data-id="{{items}}" src="cloud://words-1gj5wb0dc070a2cf.776f-words-1gj5wb0dc070a2cf-1304851963/words{{wordsId}}/{{items}}.jpg"></image>
+						<!-- <image class="card" bindtap="bb"  data-id="{{items}}" src="../../images/{{items}}.jpg"></image> -->
+				</view>		
+        	<audio src="http://dict.youdao.com/dictvoice?audio={{items}}" id="{{items}}"></audio>
+      <view class="rember-play">
+				<view class="remenber">
+					<image src="../../images/listen.png"></image>记住了
+				</view>
+				<view class="play" bindtap="play" data-id="{{items}}">
+						<image bindtap="bb" src="../../images/listen.png"></image>
+				</view>
+				<view class="mean">
+						<image src="../../images/listen.png"></image>
+					<view>汉语</view>
+				</view>
+			</view>
+				
+				<view class="wordEn">
+					{{items}}
+				</view>
+    	</view>
+		</swiper-item>
+    </block>
+		
+</swiper>
+</page>

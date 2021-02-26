@@ -1,0 +1,17 @@
+<!--pages/indexa/indexa.wxml-->
+<view class="todayDate">
+  <view class="chooseModel">
+    <text bindtap="changeModel" class="learn model {{current1}}" data-id="1">学习模式</text>
+    <text bindtap="changeModel" class="test model {{current2}}" data-id="2">测试模式</text>
+  </view>
+</view>
+<view class="container">
+  <block wx:for="{{itemBox}}" wx:key="*this" wx:for-item="items">
+    <view  class="box" data-id="{{items.id}}" data-current="{{current1}}" data-bgcolor="{{items.bgColor}}" bindtap="jumpto" style="background-color:{{items.bgColor}}">
+      <image class="meanPic {{blur}}" src="{{items.url}}"></image>
+      <image class="question" style="display:{{display}}" src="/images/question.png"></image>
+      <view class="meanEn">{{items.wordEn}}</view>
+      <view class="meanCh">{{items.wordCh}}</view>
+    </view>
+  </block>
+</view>

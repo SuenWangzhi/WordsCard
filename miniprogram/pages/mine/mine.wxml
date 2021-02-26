@@ -1,0 +1,14 @@
+<!--pages/mine/mine.wxml-->
+<view class="openData">
+  <view  class="userImg">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+<open-data type="userNickName" class="userName"></open-data>
+</view>
+
+
+
+
+<view bindtap="goWords" class="other">
+  <text>已会单词</text>
+</view>
