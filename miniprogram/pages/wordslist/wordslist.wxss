@@ -4,11 +4,11 @@ page{
 }
 .wordsitem{
   width: 100%;
-  height: 100rpx;
+  height: 120rpx;
   background-color: #fff;
-  font-size: 40rpx;
+  font-size: 46rpx;
   display: flex;
-  line-height: 100rpx;
+  line-height: 120rpx;
   border-bottom: 1rpx solid #eeeeee;
 }
 .wordEn{

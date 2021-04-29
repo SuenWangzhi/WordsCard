@@ -1,14 +1,22 @@
-<!--pages/mine/mine.wxml-->
 <view class="openData">
+  <image class="cardbg" src='/images/cardBg.png'></image>
   <view  class="userImg">
     <open-data type="userAvatarUrl"></open-data>
   </view>
 <open-data type="userNickName" class="userName"></open-data>
 </view>
-
-
-
-
-<view bindtap="goWords" class="other">
-  <text>已会单词</text>
+<view bindtap="goWords" data-url="wordslist" class="other">
+  <view class="other-item">
+  已会单词
+ </view>
+</view>
+<view class="other">
+<view bindtap="goWords"  data-url="about" class="other-item">
+  关于闪卡记单词
+</view>
+<view bindtap="praiseImg"  data-url="praise" class="other-item">
+  赞赏支持
+</view>
+<button class="other-item" open-type="feedback" hover-class="none">意见反馈</button>
+<button class="other-item" open-type="contact" hover-class="none">联系客服</button>
 </view>

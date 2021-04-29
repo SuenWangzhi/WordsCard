@@ -1,0 +1,10 @@
+/* pages/about/about.wxss */
+.aboutcard{
+  width: 600rpx;
+  height:600rpx;
+  margin:80rpx auto;
+  background-color: #ffffff;
+  border-radius: 25rpx;
+  color: #333333;
+  padding:180rpx 25rpx ;
+}

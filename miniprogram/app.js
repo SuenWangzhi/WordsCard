@@ -9,13 +9,13 @@ App({
         //   env 参数决定接下来小程序发起的云开发调用（wx.cloud.xxx）会默认请求到哪个云环境的资源
         //   此处请填入环境 ID, 环境 ID 可打开云控制台查看
         //   如不填则使用默认环境（第一个创建的环境）
-        env: 'wordcard-1g3htmts2bc8dac6',
+        env: 'words-1gj5wb0dc070a2cf',
         traceUser: true,
       })
     }
-    const websites = JSON.parse(localStorage.getItem('websites'))
-    const hashMap = websites || [
-    ]
+    if(wx.getStorageSync('words')==''){
+      wx.setStorageSync('words', [])
+    }
     this.globalData = {}
   }
 })

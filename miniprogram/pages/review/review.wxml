@@ -1,0 +1,18 @@
+<!--pages/test/test.wxml-->
+<view class="container">
+  <view class="option">
+<image src="/images/kiwi.jpg"></image>
+</view>
+<view class="option">
+<image src="/images/banana.jpg"></image>
+</view>
+<view class="option">
+<image src="/images/watermelon.jpg"></image>
+</view>
+<view class="option">
+<image src="/images/grapes.jpg"></image>
+</view>
+</view>
+<view class="wordEn">
+			grapes
+</view>

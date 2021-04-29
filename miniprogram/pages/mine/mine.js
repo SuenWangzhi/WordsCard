@@ -60,12 +60,16 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
+  praiseImg: function () {
+    wx.previewImage({
+      urls: ['cloud://words-1gj5wb0dc070a2cf.776f-words-1gj5wb0dc070a2cf-1304851963/erweima.jpg'],
+      current: 'cloud://words-1gj5wb0dc070a2cf.776f-words-1gj5wb0dc070a2cf-1304851963/erweima.jpg' // 当前显示图片的http链接      
+    })
   },
-  goWords:function(){
+  goWords:function(ex){
+    let url = ex.currentTarget.dataset.url;
     wx.navigateTo({
-      url: '/pages/wordslist/wordslist'
+      url: '/pages/'+url+'/'+url
     })
   }
 })

@@ -27,38 +27,39 @@ swiper-item .card{
   width: 600rpx;
   height: 150rpx;
   align-items: center;
-  margin-top: -25rpx;
+  margin-top: 6rpx;
   overflow: hidden;
 }
 .play image{
   width: 130rpx;
   height: 130rpx;
   border-radius: 50%;
-  box-shadow:0rpx 3rpx 5rpx #555;
+  box-shadow:0rpx 1rpx 6rpx #eee;
 }
 .remenber,.mean{
   width: 200rpx;
-  height: 70rpx;
-  color: #fff;
-  line-height: 70rpx;
+  height: 66rpx;
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 66rpx;
+  text-align: center;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center; 
-  background-color: #6663EC;
-  box-shadow: 0 1rpx 5rpx #666;
+  box-shadow: 0 2rpx 8rpx #666;
+  border:10rpx solid #ffffff;
+  background-color: #FF0033;
 }
 .remenber{
-  border-radius: 0 35rpx 35rpx 0;
+  border-radius: 8rpx 43rpx 43rpx 8rpx;
 }
 .mean{
-  border-radius: 35rpx 0 0 35rpx;
+  border-radius: 43rpx 8rpx 8rpx 43rpx;
 }
 .remenber image,.mean image{
   width:50rpx;
   height:50rpx;
-  background: white;
-  border-radius: 50%;
   margin: 10px;
 }
 .wordEn{

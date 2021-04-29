@@ -1,12 +1,10 @@
-// pages/wordslist/wordslist.js
+// pages/review/review.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -18,16 +16,6 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    const saveWordslist=wx.getStorageSync("words")
-    this.setData({
-      wordsList:saveWordslist
-    })
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
     const openid=wx.getStorageSync("openid")
     console.log("my openid:"+openid)
     wx.cloud.callFunction({
@@ -35,6 +23,13 @@ Page({
     }).then(res=>{
       console.log(JSON.stringify(res))
     })
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
   },
 
   /**

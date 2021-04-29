@@ -13,5 +13,5 @@
       <view class="meanEn">{{items.wordEn}}</view>
       <view class="meanCh">{{items.wordCh}}</view>
     </view>
-  </block>
+  </block> 
 </view>

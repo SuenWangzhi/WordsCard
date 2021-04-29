@@ -3,32 +3,46 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: 400rpx;
-  align-items: center;
-  align-content:center ;
+  height: 350rpx;
   justify-content:center ;
   background-color:#EC8CB3 ;
+  margin-bottom: 30rpx;
+}
+.cardbg{
+  position: absolute;
+  width: 100%;
 }
 .userImg{
+  margin-top: 20rpx;
   width: 150rpx;
   height: 150rpx;
   border-radius: 50%;
   overflow: hidden;
 }
 .userName{
-  height: 100rpx;
-  line-height: 100rpx;
+  height: 90rpx;
   width: 100%;
   font-size: 40rpx;
   color: white;
   text-align: center;
 }
 .other{
+  margin: 25rpx auto 10rpx;
+  width: 650rpx;
   background-color: #fff;
-  width: 100%;
-  height: 100rpx;
-  margin-top: 40rpx;
-  line-height: 100rpx;
-  padding-left: 35rpx;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 0rpx 3rpx #222;
+}
+.other-item{
+  width: 100%!important;
+  height: 120rpx;
+  line-height: 120rpx;
+  padding:0 35rpx !important;
   box-sizing: border-box;
+  border-bottom: 1rpx solid #ccc;
+  font-size: 30rpx;
+  font-weight: 500;
+}
+button{
+ text-align: left;
 }

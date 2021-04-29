@@ -1,29 +1,28 @@
 	<page  style="background-color:{{bgcolor}}">
 	<swiper bindchange="currentchange" style="height: 100vh;" previous-margin="75rpx">
-	<block wx:for="{{background}}" wx:key="*this" wx:for-item="items">
-       
+	<block wx:for="{{background}}" wx:key="*this" wx:for-item="items">   
     <swiper-item>
       <view>
 				<view class="img-container">
-					<image class="card" bindtap="bb"  data-id="{{items}}" src="cloud://words-1gj5wb0dc070a2cf.776f-words-1gj5wb0dc070a2cf-1304851963/words{{wordsId}}/{{items}}.jpg"></image>
+					<image class="card" bindtap="bb"  data-id="{{items}}" src="cloud://words-1gj5wb0dc070a2cf.776f-words-1gj5wb0dc070a2cf-1304851963/words{{wordsId}}/{{items.wordEn}}.jpg"></image>
 						<!-- <image class="card" bindtap="bb"  data-id="{{items}}" src="../../images/{{items}}.jpg"></image> -->
 				</view>		
-        	<audio src="http://dict.youdao.com/dictvoice?audio={{items}}" id="{{items}}"></audio>
+        	<!-- <audio src="http://dict.youdao.com/dictvoice?audio={{items.wordEn}}" id="{{items.wordEn}}"></audio> -->
       <view class="rember-play">
-				<view class="remenber">
-					<image src="../../images/listen.png"></image>记住了
+				<view class="remenber" bindtap="saveWords" data-wordsID="{{wordsId}}" data-wordCh="{{items.wordCh}}" data-word="{{items.wordEn}}">
+					<image src="../../images/finish.png"></image>记住了
 				</view>
-				<view class="play" bindtap="play" data-id="{{items}}">
+				<view class="play" bindtap="play" data-id="{{items.wordEn}}">
 						<image bindtap="bb" src="../../images/listen.png"></image>
 				</view>
-				<view class="mean">
-						<image src="../../images/listen.png"></image>
-					<view>汉语</view>
+				<view class="mean" data-wordid="{{items.wordId}}"  data-index="{{index}}" bindtap="language">
+						<image src="../../images/xingrong.png"></image>
+					<view>语言</view>
 				</view>
 			</view>
-				
-				<view class="wordEn">
-					{{items}}
+				<view class="wordEn" >
+					<view wx:if="{{items.wordId>0}}" >{{items.wordEn}}</view>
+					<view wx:else>{{items.wordCh}}</view>
 				</view>
     	</view>
 		</swiper-item>

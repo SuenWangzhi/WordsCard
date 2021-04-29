@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/mine/mine",
     "pages/main/main",
+    "pages/review/review",
     "pages/wordslist/wordslist",
+    "pages/about/about",
     "pages/test/test"
   ],
   "window": {
@@ -18,9 +20,15 @@
     "selectedColor": "#6663EC",
     "list": [{
       "pagePath": "pages/index/index",
-      "text": "首页",
+      "text": "学习",
       "iconPath": "images/word0.png",
       "selectedIconPath": "images/word1.png"
+    },
+    {
+      "pagePath": "pages/review/review",
+      "text": "复习",
+      "iconPath": "images/review0.png",
+      "selectedIconPath": "images/review1.png"
     },
     {
       "pagePath": "pages/mine/mine",

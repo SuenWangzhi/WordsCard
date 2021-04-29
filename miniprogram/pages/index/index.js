@@ -26,7 +26,7 @@ itemBox:[
   {id:14,url:"../../images/doctor.png",wordEn:"Occupations",wordCh:"职业",bgColor:"#990066"},
   {id:15,url:"../../images/sun.png",wordEn:"Nature",wordCh:"自然",bgColor:"#003399"},
   {id:16,url:"../../images/toys.png",wordEn:"Toys",wordCh:"玩具",bgColor:"#CC3366"},
-  {id:17,url:"../../images/weather.png",WordEn:"Weather",wordCh:"天气",bgColor:"#FF0033"},
+  {id:17,url:"../../images/weather.png",wordEn:"Weather",wordCh:"天气",bgColor:"#FF0033"},
   {id:18,url:"../../images/wupin.png",wordEn:"Goods",wordCh:"物品",bgColor:"#FFCC00"},
   {id:19,url:"../../images/location.png",wordEn:"Locations",wordCh:"地点",bgColor:"#FF99cc"},
   {id:20,url:"../../images/xingrong.png",wordEn:"Opposites",wordCh:"反义词",bgColor:"#336699"},
@@ -88,6 +88,7 @@ itemBox:[
 
   },
   jumpto: function (ex) {
+    wx.vibrateShort({type:"heavy"})
     let id = ex.currentTarget.dataset.id;
     let bgColor = ex.currentTarget.dataset.bgcolor;
     let current1 = ex.currentTarget.dataset.current;

@@ -16,7 +16,6 @@ page{
   margin: 40rpx auto;
   flex-grow: 1;
   border-radius: 60rpx;
-  box-shadow: 1rpx 2rpx 16rpx #888;
 }
 .option{
   width: 260rpx;

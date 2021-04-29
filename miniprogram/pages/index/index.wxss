@@ -5,7 +5,7 @@ page{
 .todayDate{
   width: 100%;
   height: 130rpx;
-  background-color: #D8F0F0;
+  background-color: #f6f6f6;
   text-align: center;
   line-height: 80rpx;
 }
@@ -36,6 +36,7 @@ box-shadow: 0 0 10rpx #d7e4f3;
   width:750rpx ;
   flex-direction: row;
   height:4520rpx;
+  /* height:2280rpx; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
