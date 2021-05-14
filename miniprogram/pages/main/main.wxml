@@ -1,15 +1,18 @@
 	<page  style="background-color:{{bgcolor}}">
 	<swiper bindchange="currentchange" style="height: 100vh;" previous-margin="75rpx">
-	<block wx:for="{{background}}" wx:key="*this" wx:for-item="items">   
+	<block wx:for="{{background}}" wx:key="index" wx:for-item="items">   
     <swiper-item>
       <view>
 				<view class="img-container">
-					<image class="card" bindtap="bb"  data-id="{{items}}" src="cloud://words-1gj5wb0dc070a2cf.776f-words-1gj5wb0dc070a2cf-1304851963/words{{wordsId}}/{{items.wordEn}}.jpg"></image>
-						<!-- <image class="card" bindtap="bb"  data-id="{{items}}" src="../../images/{{items}}.jpg"></image> -->
+					<view class="wordcard {{class1[index]}}">
+						{{items.wordEn}}
+					</view>
+					<image class="card {{class2[index]}}" data-id="{{items}}" src="cloud://words-1gj5wb0dc070a2cf.776f-words-1gj5wb0dc070a2cf-1304851963/words{{typeid}}/{{items.wordEn}}.jpg"></image>
+					<image class="overturn"  data-current="1"  data-index="{{index}}" bindtap="overturn"  src="/images/overturn.png"></image>
 				</view>		
         	<!-- <audio src="http://dict.youdao.com/dictvoice?audio={{items.wordEn}}" id="{{items.wordEn}}"></audio> -->
       <view class="rember-play">
-				<view class="remenber" bindtap="saveWords" data-wordsID="{{wordsId}}" data-wordCh="{{items.wordCh}}" data-word="{{items.wordEn}}">
+				<view class="remenber" bindtap="saveWords" data-wordsid="{{items._id}}">
 					<image src="../../images/finish.png"></image>记住了
 				</view>
 				<view class="play" bindtap="play" data-id="{{items.wordEn}}">
@@ -21,8 +24,8 @@
 				</view>
 			</view>
 				<view class="wordEn" >
-					<view wx:if="{{items.wordId>0}}" >{{items.wordEn}}</view>
-					<view wx:else>{{items.wordCh}}</view>
+					<view wx:if="{{items.wordId>0}}" >{{items.wordCh}}</view>
+					<view wx:else>{{items.wordEn}}</view>
 				</view>
     	</view>
 		</swiper-item>

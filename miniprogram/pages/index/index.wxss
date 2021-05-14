@@ -35,8 +35,8 @@ box-shadow: 0 0 10rpx #d7e4f3;
 .container{
   width:750rpx ;
   flex-direction: row;
-  height:4520rpx;
-  /* height:2280rpx; */
+  /* height:4520rpx; */
+   height:3200rpx; 
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;

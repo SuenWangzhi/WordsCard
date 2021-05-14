@@ -10,7 +10,15 @@ const UserWords = db.collection('UserWords')
 // 云函数入口函数
 exports.main = async (event, context) => {
   const openid= cloud.getWXContext().OPENID
-  return db.collection('UserWords').where({
-    _openid:openid
-  }).get()
+  return db.collection('UserWords').aggregate()
+  .lookup({
+    from: 'EngWords',
+    localField: 'wordsid',
+    foreignField: '_id',
+    as: 'wordsdetail',
+  })
+  .match({
+    _openid: openid
+  })
+  .end()
 }

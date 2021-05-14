@@ -13,9 +13,21 @@ App({
         traceUser: true,
       })
     }
-    if(wx.getStorageSync('words')==''){
-      wx.setStorageSync('words', [])
+    function getopenid(){
+      let theopenid=''
+      wx.cloud.callFunction({
+        name: 'login',
+        data: {},
+        success: res => {
+          wx.setStorageSync('openid',res.result.openid)
+        },
+        fail: err => {
+          console.error('[云函数] [login] 调用失败', err)
+        }
+      })
     }
-    this.globalData = {}
+    
+    let openid=wx.getStorageSync('openid')||getopenid()
+    console.log("openid:"+wx.getStorageSync('openid'))
   }
 })

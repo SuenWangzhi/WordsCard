@@ -14,12 +14,36 @@ swiper-item>view{
   border-radius: 20rpx;
   position: relative;
 }
-swiper-item .card{
+@keyframes front{from{transform: rotateY(0deg);} to{transform: rotateY(180deg);}}
+@keyframes back{from{transform: rotateY(-180deg);} to{transform: rotateY(0deg);}}
+.front{
+  animation:front 1s linear 1;
+  backface-visibility: hidden;
+  z-index: 1;
+}
+.back{
+  animation:back 1s linear 1;
+  z-index: 0;
+}
+.z1{
+  z-index: 1;
+}
+.z2{
+  z-index: 0;
+}
+swiper-item .card,.wordcard{
   width: 600rpx;
   height: 600rpx;
   display: block;
   border-radius: 20rpx;
   position: absolute;
+}
+swiper-item .wordcard{
+  background-color: #ffffff;
+  line-height: 600rpx;
+  text-align: center;
+  font-size: 108rpx;
+  font-weight: 700;
 }
 .rember-play{
   display: flex;
@@ -65,7 +89,17 @@ swiper-item .card{
 .wordEn{
   width: 600rpx;
   text-align: center;
-  font-size: 100rpx;
-  font-weight: 600;
+  font-size: 60rpx;
   color: white;
+}
+.overturn{
+  position: absolute;
+  box-shadow:0 0 10rpx #444;
+  margin:25rpx 455rpx;
+  border-radius:50%;
+  width:80rpx;
+  height:80rpx;
+  padding:20rpx;
+  background-color:#FFF;
+  z-index: 2;
 }

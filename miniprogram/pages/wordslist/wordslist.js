@@ -18,10 +18,6 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    const saveWordslist=wx.getStorageSync("words")
-    this.setData({
-      wordsList:saveWordslist
-    })
   },
 
   /**
@@ -33,7 +29,9 @@ Page({
     wx.cloud.callFunction({
       name:'getuserwords'
     }).then(res=>{
-      console.log(JSON.stringify(res))
+      this.setData({
+        wordsList:res.result.list
+      })
     })
   },
 

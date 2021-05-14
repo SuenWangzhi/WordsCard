@@ -5,16 +5,18 @@
   </view>
 <open-data type="userNickName" class="userName"></open-data>
 </view>
-<view bindtap="goWords" data-url="wordslist" class="other">
-  <view class="other-item">
+<view class="other" > 
+ <view bindtap="goWords" data-url="wordslist" class="other-item">
   已会单词
  </view>
+
 </view>
+
 <view class="other">
 <view bindtap="goWords"  data-url="about" class="other-item">
   关于闪卡记单词
 </view>
-<view bindtap="praiseImg"  data-url="praise" class="other-item">
+<view bindtap="praiseImg" class="other-item">
   赞赏支持
 </view>
 <button class="other-item" open-type="feedback" hover-class="none">意见反馈</button>

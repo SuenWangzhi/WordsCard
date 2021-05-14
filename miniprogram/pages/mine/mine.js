@@ -67,6 +67,7 @@ Page({
     })
   },
   goWords:function(ex){
+    console.log("aaaa")
     let url = ex.currentTarget.dataset.url;
     wx.navigateTo({
       url: '/pages/'+url+'/'+url

@@ -1,18 +1,25 @@
 <!--pages/test/test.wxml-->
-<view class="container">
-  <view class="option">
-<image src="/images/kiwi.jpg"></image>
-</view>
-<view class="option">
-<image src="/images/banana.jpg"></image>
-</view>
-<view class="option">
-<image src="/images/watermelon.jpg"></image>
-</view>
-<view class="option">
-<image src="/images/grapes.jpg"></image>
-</view>
+<view class="container" style="background-color:{{bgcolor}}">
+  <block wx:for="{{wordslist}}" wx:key="index" wx:for-item="items">
+    <view  animation="{{ani2}}" bindtap="selected" data-wordindex="{{wordindex}}" data-istrue="{{items.istrue}}" class="option">
+      <image src="cloud://words-1gj5wb0dc070a2cf.776f-words-1gj5wb0dc070a2cf-1304851963/words{{items.word[0].typeId}}/{{items.word[0].wordEn}}.jpg"></image>
+    </view>
+    
+  </block>
+    <image style="display:{{display}}" animation="{{ani1}}" class="rightpng" src="/images/right.png"></image>
 </view>
 <view class="wordEn">
-			grapes
+		{{wordEn[0].wordEn}}
+</view>
+
+<view class="zan-dialog {{ showDialog ? 'zan-dialog--show' : '' }}">
+  <!-- 如果想点击弹窗外不隐藏，取消bindtap点击事件即可 -->
+  <view class="zan-dialog__mask" bindtap="toggleDialog" />
+  <view class="zan-dialog__container">
+    <view style='padding:80rpx;'>
+      <view>
+      全部回答正确
+      </view>
+    </view>
+  </view>
 </view>
